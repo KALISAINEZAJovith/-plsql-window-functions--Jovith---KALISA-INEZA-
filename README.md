@@ -77,16 +77,3 @@ Result: computed per row; number of rows returned unchanged.
 - NULLIF(x,0) prevents divide-by-zero in percentage calculations by returning NULL when denominator is 0.
 - Pattern: growth = (current - previous) / NULLIF(previous, 0)
 
-## Common troubleshooting notes
-
-- "#1305 TO_CHAR/TO_DATE does not exist": SQL originally written for Oracle; convert formatting/parsing functions to MySQL equivalents or use native date literals.
-- Window functions missing: requires MySQL 8.0+. Verify server version if functions fail.
-- Unexpected ranking gaps: choose DENSE_RANK vs RANK depending on whether gaps are acceptable.
-
-## Final notes
-
-This README is intentionally code-free and focused on conceptual clarity. If you want a short one-page cheat-sheet or a version with small code snippets for each concept, I can produce that as a separate file.
-
----
-
-If you want a final visual polish (PDF export, improved typography, or a printable cheat-sheet), tell me which format and I'll prepare it.
